@@ -10,7 +10,7 @@
 
 ```bash
 # 添加此 tap
-brew tap wu21-web/tap
+brew tap Pixeval/tap
 
 # 安装 Pixeval
 brew install --cask pixeval
@@ -25,7 +25,7 @@ brew uninstall --cask --zap pixeval
 brew uninstall --cask pixeval
 
 # 移除 tap 本身
-brew untap wu21-web/tap
+brew untap Pixeval/tap
 ```
 
 ## 更新

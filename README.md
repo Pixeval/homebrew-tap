@@ -10,7 +10,7 @@ Self-hosted [Homebrew](https://brew.sh) tap for [Pixeval](https://github.com/Pix
 
 ```bash
 # Add this tap
-brew tap wu21-web/tap
+brew tap Pixeval/tap
 
 # Install Pixeval
 brew install --cask pixeval
@@ -25,7 +25,7 @@ brew uninstall --cask --zap pixeval
 brew uninstall --cask pixeval
 
 # Remove the tap itself
-brew untap wu21-web/tap
+brew untap Pixeval/tap
 ```
 
 ## Update
