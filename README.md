@@ -2,6 +2,10 @@
 
 Self-hosted [Homebrew](https://brew.sh) tap for [Pixeval](https://github.com/Pixeval/Pixeval) — a cross-platform Pixiv client for browsing, downloading, and managing illustrations on macOS, Linux, Windows, and Android.
 
+[![brew test-bot](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml)
+[![brew test-bot](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml)
+[![brew test-bot](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml)
+
 ## Install
 
 ```bash
