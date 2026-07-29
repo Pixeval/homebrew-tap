@@ -10,6 +10,9 @@ Self-hosted [Homebrew](https://brew.sh) tap for [Pixeval](https://github.com/Pix
 # Add this tap
 brew tap Pixeval/tap
 
+# Trust this tap
+brew trust Pixeval/tap
+
 # Install Pixeval
 brew install --cask pixeval
 ```

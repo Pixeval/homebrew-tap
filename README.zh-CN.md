@@ -11,6 +11,9 @@
 # 添加此 tap
 brew tap Pixeval/tap
 
+#信任这个 tap
+brew trust Pixeval/tap
+
 # 安装 Pixeval
 brew install --cask pixeval
 ```
