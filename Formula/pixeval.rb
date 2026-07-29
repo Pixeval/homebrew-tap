@@ -28,15 +28,26 @@ class Pixeval < Formula
 
   def install
     if OS.mac?
+      # Homebrew strips Pixeval.app wrapper during zip staging,
+      # leaving Contents/ etc. bare in the staging directory.
+      mkdir_p "Pixeval.app"
+      Dir["*"].each do |item|
+        next if %w[Pixeval.app .brew_home].include?(item)
+
+        mv item, "Pixeval.app"
+      end
       prefix.install "Pixeval.app"
-      bin.write_exec_script prefix/"Pixeval.app/Contents/MacOS/Pixeval.Desktop"
     else
       libexec.install Dir["*"]
-      bin.write_exec_script libexec/"Pixeval.Desktop"
+      (bin/"pixeval").write_env_script libexec/"Pixeval.Desktop"
     end
   end
 
   test do
-    assert_path_exists bin/"Pixeval.Desktop"
+    if OS.mac?
+      assert_path_exists prefix/"Pixeval.app"
+    else
+      assert_path_exists bin/"pixeval"
+    end
   end
 end
