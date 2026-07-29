@@ -15,6 +15,7 @@ class Pixeval < Formula
   end
 
   on_linux do
+    depends_on "patchelf" => :build
     depends_on "fontconfig"
     on_arm do
       url "https://github.com/Pixeval/Pixeval/releases/download/5.0.5/Pixeval-5.0.5-linux-arm64.tar.gz"
@@ -39,6 +40,15 @@ class Pixeval < Formula
       prefix.install "Pixeval.app"
     else
       libexec.install Dir["*"]
+      # Fix RPATH so bundled libs can find Homebrew-installed fontconfig etc.
+      [libexec/"libSkiaSharp.so", libexec/"libHarfBuzzSharp.so",
+       libexec/"libe_sqlite3.so", libexec/"Pixeval.Desktop"].each do |elf|
+        next unless File.exist?(elf)
+
+        old_rpath = `patchelf --print-rpath #{elf}`.strip
+        new_rpath = [old_rpath, (HOMEBREW_PREFIX/"lib").to_s].reject(&:empty?).join(":")
+        system "patchelf", "--set-rpath", new_rpath, elf
+      end
       bin.write_exec_script libexec/"Pixeval.Desktop"
     end
   end
