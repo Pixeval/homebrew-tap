@@ -15,6 +15,7 @@ class Pixeval < Formula
   end
 
   on_linux do
+    depends_on "fontconfig"
     on_arm do
       url "https://github.com/Pixeval/Pixeval/releases/download/5.0.5/Pixeval-5.0.5-linux-arm64.tar.gz"
       sha256 "05bfee9193ac80d46cfc6f4a8c0cc329077395083a0d0f80b15cb3e4915df971"
