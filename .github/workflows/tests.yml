@@ -46,7 +46,9 @@ jobs:
 
       - run: brew test-bot --only-tap-syntax
       - run: brew test-bot --only-formulae
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && matrix.os == 'ubuntu-latest'
+      - run: brew test-bot
+        if: github.event_name == 'pull_request' && matrix.os != 'ubuntu-latest'
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
