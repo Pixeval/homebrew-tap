@@ -13,8 +13,8 @@ cask "pixeval" do
   end
 
   name "Pixeval"
-  desc "Pixiv client for browsing, downloading, and managing illustrations"
-  homepage "https://github.com/Pixeval/Pixeval"
+  desc "Wow. Yet another Pixiv client!"
+  homepage "https://pixeval.github.io"
 
   depends_on macos: :ventura
 
