@@ -1,7 +1,6 @@
 class Pixeval < Formula
   desc "Wow. Yet another Pixiv client!"
   homepage "https://pixeval.github.io/"
-  version "5.0.5"
   license "GPL-3.0-only"
 
   on_macos do
