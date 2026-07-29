@@ -14,7 +14,7 @@ cask "pixeval" do
 
   name "Pixeval"
   desc "Wow. Yet another Pixiv client!"
-  homepage "https://pixeval.github.io"
+  homepage "https://pixeval.github.io/"
 
   depends_on macos: :ventura
 
