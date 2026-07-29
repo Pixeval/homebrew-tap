@@ -2,7 +2,7 @@
 
 [Pixeval](https://github.com/Pixeval/Pixeval) 的自托管 [Homebrew](https://brew.sh) tap —— 一款跨平台 Pixiv 客户端，支持在 macOS、Linux、Windows 和 Android 上浏览、下载和管理插画作品。
 
-[![brew test-bot](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/wu21-web/homebrew-tap/actions/workflows/tests.yml)
+[![brew test-bot](https://github.com/Pixeval/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/Pixeval/homebrew-tap/actions/workflows/tests.yml)
 
 
 ## 安装
