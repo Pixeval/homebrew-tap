@@ -39,7 +39,7 @@ class Pixeval < Formula
       prefix.install "Pixeval.app"
     else
       libexec.install Dir["*"]
-      (bin/"pixeval").write_env_script libexec/"Pixeval.Desktop"
+      bin.write_exec_script libexec/"Pixeval.Desktop"
     end
   end
 
@@ -47,7 +47,7 @@ class Pixeval < Formula
     if OS.mac?
       assert_path_exists prefix/"Pixeval.app"
     else
-      assert_path_exists bin/"pixeval"
+      assert_path_exists bin/"Pixeval.Desktop"
     end
   end
 end
