@@ -11,11 +11,14 @@
 # 添加此 tap
 brew tap Pixeval/tap
 
-#信任这个 tap
+# 信任这个 tap
 brew trust Pixeval/tap
 
-# 安装 Pixeval
+# 安装 Pixeval (仅Mac)
 brew install --cask pixeval
+
+# 通过 Formula 安装(支持Mac & Linux)
+brew install --formula pixeval
 ```
 
 ## 卸载
@@ -25,6 +28,9 @@ brew uninstall --cask --zap pixeval
 
 # 仅卸载应用，保留用户数据
 brew uninstall --cask pixeval
+
+# 卸载 Formula
+brew uninstall --formula pixeval && brew cleanup
 
 # 移除 tap 本身
 brew untap Pixeval/tap
