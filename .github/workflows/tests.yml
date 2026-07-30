@@ -50,7 +50,7 @@ jobs:
 
       - run: brew test-bot --only-tap-syntax
       - run: brew test-bot --only-formulae
-        if: github.event_name == 'pull_request' && startsWith(matrix.os, 'ubuntu-')
+        if: github.event_name == 'pull_request'
       - run: brew test-bot
         if: github.event_name == 'pull_request' && !startsWith(matrix.os, 'ubuntu-')
 
