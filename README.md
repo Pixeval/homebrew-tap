@@ -13,8 +13,11 @@ brew tap Pixeval/tap
 # Trust this tap
 brew trust Pixeval/tap
 
-# Install Pixeval
+# Install Pixeval (Mac Only)
 brew install --cask pixeval
+
+# Install Pixeval by formula (Mac & Linux)
+brew install --formula pixeval
 ```
 
 ## Uninstall
@@ -24,6 +27,9 @@ brew uninstall --cask --zap pixeval
 
 # Or just remove the app, keeping your data
 brew uninstall --cask pixeval
+
+# Uninstall the formula
+brew uninstall --formula pixeval && brew cleanup
 
 # Remove the tap itself
 brew untap Pixeval/tap
@@ -35,6 +41,8 @@ Pixeval will update itself automatically on launch. The cask here tracks the lat
 
 ```bash
 brew upgrade --cask pixeval
+# Or if you install by formula
+brew upgrade --formula pixeval
 ```
 
 ## About Pixeval
