@@ -5,12 +5,12 @@ class Pixeval < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.7/Pixeval-5.0.7-macos-arm64.zip"
-      sha256 "f2c8e948a3befdbaa729de0f4f282711dd995eab9ba4c2e5bd46780ca206e124"
+      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.8/Pixeval-5.0.8-macos-arm64.zip"
+      sha256 "f40910d1bbb990cfd473c3f1b911b777379de0f367684a3c570ad59f2d26a877"
     end
     on_intel do
-      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.7/Pixeval-5.0.7-macos-x64.zip"
-      sha256 "787ee8f8fb004540a41a8d7cd2dd4230bd928096b21cf8e74ef7f5be087467a5"
+      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.8/Pixeval-5.0.8-macos-x64.zip"
+      sha256 "29bfd95184acf9486e4c315e4afee95bd1015333df7ffda6de6298a097e243dc"
     end
   end
 
@@ -18,12 +18,12 @@ class Pixeval < Formula
     depends_on "patchelf" => :build
     depends_on "fontconfig"
     on_arm do
-      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.7/Pixeval-5.0.7-linux-arm64.tar.gz"
-      sha256 "e1a5c9d4d50697e1f265704bb56028c797011a379f48f9a9a6d6d91598ca6543"
+      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.8/Pixeval-5.0.8-linux-arm64.tar.gz"
+      sha256 "56229d5a90464fc780b59f7eaf84dcd4b987074aef460decb4d362af5f2a4e30"
     end
     on_intel do
-      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.7/Pixeval-5.0.7-linux-x64.tar.gz"
-      sha256 "e0260e231b17c1be215e3c470b6fb8cd1ad4c65457102991bd76e8b38a85ff85"
+      url "https://github.com/Pixeval/Pixeval/releases/download/5.0.8/Pixeval-5.0.8-linux-x64.tar.gz"
+      sha256 "5d76b01419e567daa56c193f3e48e6bbc02bd023a871d55776757626766eeb6b"
     end
   end
 
