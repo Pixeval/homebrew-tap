@@ -9,6 +9,9 @@ on:
       - '**.md'
   workflow_dispatch:
 
+concurrency:
+  cancel-in-progress: true
+
 jobs:
   test-bot:
     strategy:
