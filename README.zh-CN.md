@@ -30,6 +30,12 @@ brew uninstall --cask pixeval
 brew untap Pixeval/tap
 ```
 
+> [!TIP]
+> 对于网络访问受限的中国用户，我们提供一个带镜像的@cn变种：
+> `brew install --cask pixeval@cn`。
+> 这个镜像并不保证随时可用，且可能发行恶意软件。使用风险自负。
+> 如果镜像不再可用，考虑打开一个议题。
+
 ## 更新
 
 Pixeval 会在启动时自动检查更新。本 cask 跟踪最新发布版本，你也可以手动升级：
