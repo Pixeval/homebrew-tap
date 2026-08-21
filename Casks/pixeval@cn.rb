@@ -16,6 +16,7 @@ cask "pixeval@cn" do
   desc "Wow. Yet another Pixiv client!"
   homepage "https://pixeval.github.io/"
 
+  conflicts_with cask: "pixeval"
   depends_on macos: :ventura
 
   app "Pixeval.app"
