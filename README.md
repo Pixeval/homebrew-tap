@@ -19,8 +19,8 @@ brew install --cask pixeval
 
 > [!TIP]
 > For Chinese users that have trouble downloading the cask, here is a @cn variant with a mirror:
-> `brew install --cask pixeval@cn`
-> The mirror might not be available at all times and might distribute malware. Use it at your own risk.
+> `brew install --cask pixeval@cn`. 
+> The mirror might not be available at all times and might distribute malware. Use it at your own risk. 
 > Consider opening an issue if the mirror does not work anymore.
 
 ## Uninstall
