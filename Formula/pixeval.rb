@@ -3,7 +3,6 @@ class Pixeval < Formula
   homepage "https://pixeval.github.io/"
   license "GPL-3.0-only"
   disable! date: "2026-08-22", because: "Pixeval changed their way of artifact distribution for linux"
-  
   on_macos do
     on_arm do
       url "https://github.com/Pixeval/Pixeval/releases/download/5.0.10/Pixeval-5.0.10-macos-arm64.zip"
