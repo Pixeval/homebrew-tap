@@ -1,15 +1,15 @@
 cask "pixeval" do
-  version "5.0.10"
+  version "5.0.11"
 
   on_arm do
-    sha256 "79aa22de17526b2a8602c4d23ee5a2592e77c1ef133887646d9e5ae9e227caa3"
+    sha256 "6a44dbb436b8b6291891b4d651da44cea299ab3971754d544d4b5006a3490186"
 
-    url "https://github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-#{version}-macos-arm64.zip"
+    url "https://github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-osx-arm64-Portable.zip"
   end
   on_intel do
-    sha256 "83ba78f50daba3c0ac7decacc8f6a2c133dc86b316645086139f02c06f80a057"
+    sha256 "3054388efe1e0b64e8f5de17f6b6a071eb4ccc800793a8649cdecf2d4b0e0fa2"
 
-    url "https://github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-#{version}-macos-x64.zip"
+    url "https://github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-osx-x64-Portable.zip"
   end
 
   name "Pixeval"
