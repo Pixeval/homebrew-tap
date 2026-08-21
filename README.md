@@ -17,6 +17,12 @@ brew trust Pixeval/tap
 brew install --cask pixeval
 ```
 
+> [!TIP]
+> For Chinese users who have trouble downloading the cask, here is a @cn variant that uses a mirror:
+> `brew install --cask pixeval@cn`.
+> The mirror might not be available at all times. If it serves content different from the upstream release, Homebrew will refuse to install due to a checksum mismatch.
+> Consider opening an issue if the mirror does not work anymore.
+
 ## Uninstall
 
 ```bash
