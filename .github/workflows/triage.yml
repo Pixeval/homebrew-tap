@@ -1,0 +1,32 @@
+name: PR Triage / Maintainence
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - auto_merge_enabled
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  triage:
+    if: (github.event.pull_request.head.repo.full_name == github.repository ) && (github.event.pull_request.user.login == 'wu21-web' || github.event.pull_request.user.login == 'dependabot[bot]' )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Approve PR
+        if: ( github.event.pull_request.user.login == 'dependabot[bot]' && github.event.action == 'opened' ) || ((github.event.pull_request.user.login == 'wu21-web') && (github.event.action == 'auto_merge_enabled'))
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr review ${{ github.event.pull_request.number }} --approve --repo ${{ github.repository }}
+
+      - name: Enable Auto Merge for Dependabot
+        if: github.event.pull_request.user.login == 'dependabot[bot]' && github.event.pull_request.auto_merge == null
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} --auto --repo ${{ github.repository }}
+    
