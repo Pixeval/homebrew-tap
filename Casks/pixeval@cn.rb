@@ -1,15 +1,30 @@
 cask "pixeval@cn" do
-  version "5.0.11"
+  arch arm: "arm64", intel: "x64"
 
-  on_arm do
-    sha256 "6a44dbb436b8b6291891b4d651da44cea299ab3971754d544d4b5006a3490186"
+  version "5.0.12"
+  sha256 arm:          "b73e56169217d62eb512d79ee029d9b93d195061d46e75ed4f0daaab1b261baf",
+         intel:        "edc09772b1d3b50bbde6052467ea9c989dfd6eb8b08035446352d8355e247ff0",
+         arm64_linux:  "f7556e09aa44874120b2d9d1f6de1fb6772e60f6d016b56fe1a83ea274928747",
+         x86_64_linux: "8cb6e5610ce6d84cc919fbedb06ba3ba225f94c9786f825165430d189f86f998"
 
-    url "https://gh-proxy.com/github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-osx-arm64-Portable.zip"
+  on_macos do
+    url "https://gh-proxy.com/github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-osx-#{arch}-Portable.zip"
+
+    depends_on macos: :ventura
+
+    app "Pixeval.app"
+
+    zap trash: [
+      "~/Library/Application Support/Pixeval",
+      "~/Library/Caches/Pixeval",
+    ]
   end
-  on_intel do
-    sha256 "3054388efe1e0b64e8f5de17f6b6a071eb4ccc800793a8649cdecf2d4b0e0fa2"
+  on_linux do
+    url "https://gh-proxy.com/github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-linux-#{arch}.AppImage"
 
-    url "https://gh-proxy.com/github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-osx-x64-Portable.zip"
+    app_image "Pixeval-linux-#{arch}.AppImage", target: "Pixeval.AppImage"
+
+    zap trash: "~/.local/share/Pixeval"
   end
 
   name "Pixeval"
@@ -17,12 +32,4 @@ cask "pixeval@cn" do
   homepage "https://pixeval.github.io/"
 
   conflicts_with cask: "pixeval"
-  depends_on macos: :ventura
-
-  app "Pixeval.app"
-
-  zap trash: [
-    "~/Library/Application Support/Pixeval",
-    "~/Library/Caches/Pixeval",
-  ]
 end
