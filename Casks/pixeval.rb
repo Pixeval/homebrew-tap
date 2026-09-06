@@ -1,5 +1,5 @@
 cask "pixeval" do
-  version "5.0.11"
+  version "5.0.12"
 
   on_arm do
     sha256 "6a44dbb436b8b6291891b4d651da44cea299ab3971754d544d4b5006a3490186"
