@@ -10,7 +10,7 @@ cask "pixeval" do
   on_macos do
     url "https://github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-osx-#{arch}-Portable.zip"
 
-    depends_on macos: :monterey
+    depends_on macos: :sonoma
 
     app "Pixeval.app"
 
