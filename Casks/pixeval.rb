@@ -1,11 +1,11 @@
 cask "pixeval" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.0.15"
-  sha256 arm:          "f6bd7f20ba4c6d417f49b9d9219343990dde752fec89dbdd5de376a2aba6a296",
-         intel:        "49715d00cccba3e5e5cebd772e62c443e9f611ab1b6852799b8d181533599a6d",
-         arm64_linux:  "606a939c0a61c49d327c7820e36dd05e61cfc9fb8995d5b496770d353f4ad48a",
-         x86_64_linux: "9643a4afe37f0c7ee63c7268bd545bade848b8ba3b48a256d4bc7308d78f04df"
+  version "5.1.0"
+  sha256 arm:          "2832fc8bb925c8b2e9cc3682fba3d8a841f1834ef89663458f72d183cf616900",
+         intel:        "d49d4d57d69d4d0a0edb98b4059a6353c6a753918b530dcecf0848baef84f48f",
+         arm64_linux:  "eb402efcae718be509f6585d3a8d4b57492d0fcbc2fdf868709bbcfe8bc1c27a",
+         x86_64_linux: "49dd1405ee405687497865796462f0fe2e971925422830e0128d046f01ecec8f"
 
   on_macos do
     url "https://github.com/Pixeval/Pixeval/releases/download/#{version}/Pixeval-osx-#{arch}-Portable.zip"
